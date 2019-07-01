@@ -14,3 +14,16 @@ default: &default
 - docker-compose build
 - docker-compose up -d
 - docker-compose run web rails db:create
+
+## 参考にしたサイト(ほとんど同じ)
+- https://qiita.com/azul915/items/5b7063cbc80192343fc0
+
+## vscode remote containersを使う場合
+- クローンしたフォルダーを開きなおす
+- 左下の青いボタンをクリック
+- Remote-Containers Open Folder in Containerをクリック
+- git cloneしたdocker-compose.ymlがあるフォルダーを指定
+- From docker-composeをクリック
+- webを選択
+- buildが終わったらいったんローカルのファイルに戻る
+- .devcontainer.jsonができているので"workspaceFolder": "/"を"/app_name"に変更する
